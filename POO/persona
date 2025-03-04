@@ -1,0 +1,41 @@
+class Persona:
+    def __init__(self, name: str = None, age: int = None):
+        self.__name = name
+        self.__age = age 
+
+    def get_name(self):
+        if not self.__name:
+            ""
+        else:
+            return print(f"La edad es: {self.__name}")
+    
+    def get_age(self):
+        if not self.__age:
+            ""
+        else:
+            return print(f"La edad es: {self.__age}")
+    
+    def set_name(self, name: str):
+        self.__name = name
+
+    def set_age(self, age: int):
+        self.__age = age
+
+    def greet(self):
+        if self.__name and not self.__age:
+            print(f"Hola soy {self.__name}")
+        elif self.__age and not self.__name:
+            print(f"Hola tengo {self.__age}")
+        else:
+            print(f"Hola soy {self.__name} y tengo {self.__age}")
+
+persona1 = Persona("Juan", 19)
+persona1.greet()
+persona2 = Persona("Alexa")
+persona2.greet()
+persona3 = Persona("", 32)
+persona3.greet()
+
+persona3.get_age()
+persona1.set_name("Jose")
+persona1.greet()
